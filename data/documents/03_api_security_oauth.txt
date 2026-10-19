@@ -1,0 +1,5 @@
+# Enterprise API Security and OAuth 2.0 Protocols
+
+Modern API gateways enforce zero-trust security postures using the OAuth 2.0 authorization framework and OpenID Connect (OIDC) identity layers. Client applications authenticate using the Proof Key for Code Exchange (PKCE) authorization flow, which prevents authorization code interception attacks on public and single-page clients.
+
+Tokens issued as JSON Web Tokens (JWT) encapsulate user claims, scopes, and expiration timestamps signed via asymmetric RSA or Ed25519 cryptographic keys. Resource servers validate tokens locally without issuing network calls to the identity provider by caching the Json Web Key Set (JWKS). In addition, robust rate limiting, mutual TLS (mTLS), and centralized token revocation lists protect critical endpoints against brute force and distributed denial-of-service (DDoS) vectors.

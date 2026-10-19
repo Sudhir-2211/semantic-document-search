@@ -1,0 +1,5 @@
+# Machine Learning Model Monitoring and Data Drift
+
+Deploying machine learning models to production is only the initial milestone of the MLOps lifecycle. Over time, production inference data naturally shifts away from training distributions—a phenomenon known as covariate shift or data drift. In addition, when the mathematical relationship between input features and target labels alters, concept drift degrades model predictive performance.
+
+To proactively detect drift before business metrics suffer, monitoring systems apply two-sample statistical tests. The Kolmogorov-Smirnov (KS) test evaluates continuous numerical features for divergence in cumulative distributions, while the Population Stability Index (PSI) and Wasserstein Distance quantify distribution shifts across categorical and continuous variables. If PSI exceeds 0.2, automated retraining pipelines are dispatched to recalibrate the model against recent ground-truth data.

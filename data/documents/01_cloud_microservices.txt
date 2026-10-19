@@ -1,0 +1,5 @@
+# Cloud-Native Microservices Architecture
+
+Cloud-native microservices decompose monolithic systems into autonomous, loosely coupled services communicating over lightweight network protocols such as gRPC or asynchronous message brokers like Apache Kafka. Each microservice manages its own localized persistence store to prevent database coupling and preserve bounded contexts.
+
+To ensure resilience across high-scale distributed deployments, organizations adopt the Circuit Breaker pattern. When a downstream dependency fails or experiences high latency, the circuit breaker trips open, failing fast or serving cached fallbacks rather than exhausting server thread pools. Furthermore, service meshes like Istio or Linkerd handle transparent mutual TLS encryption, traffic routing, canary rollouts, and distributed tracing.

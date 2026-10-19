@@ -1,0 +1,5 @@
+# High-Performance Vector Similarity Search with FAISS
+
+Facebook AI Similarity Search (FAISS) is an open-source library designed for rapid similarity search and clustering of dense vector embeddings. FAISS contains algorithms that search through vector sets of any size, up to ones that exceed available RAM, with hardware acceleration for CPUs and GPUs.
+
+For exact nearest neighbor retrieval, IndexFlatIP evaluates the dot product between query and indexed vectors, which is equivalent to cosine similarity when vectors are L2-normalized. For billion-scale search workloads, approximate nearest neighbor (ANN) structures such as Inverted File (IndexIVFFlat) and Hierarchical Navigable Small World (HNSW) graphs trade marginal recall for sub-millisecond query latency. Quantization techniques such as Product Quantization (PQ) compress high-dimensional float vectors into compact byte codes.

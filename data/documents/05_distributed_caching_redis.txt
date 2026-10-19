@@ -1,0 +1,5 @@
+# Distributed Caching Strategies with Redis
+
+In-memory data stores such as Redis deliver sub-millisecond read latencies by keeping working sets entirely in RAM, buffering high-throughput transactional backends from repetitive query overhead. Typical caching topologies include the Cache-Aside pattern, where the application layer coordinates reading from the cache and populating missing keys from the primary database on cache misses.
+
+To prevent stale data, systems configure explicit Time-To-Live (TTL) expiration alongside active cache invalidation hooks triggered on record mutation. Critical edge cases include Cache Stampede (or thundering herd), which occurs when a heavily accessed key expires, causing thousands of concurrent requests to overwhelm the database simultaneously. Developers mitigate stampedes using probabilistic early expiration algorithms (XFetch) or distributed mutex locks.
